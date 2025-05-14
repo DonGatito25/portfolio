@@ -4,7 +4,7 @@ export const Projects = () => {
     return (
         <section id="projects" className="min-h-screen flex item-center justify-center py-20">
             <RevealOnScroll>
-                <div className="max-w-5xl mx-auto px-4">
+                <div className="max-w-4xl mx-auto px-4">
                     <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 text-center bg-clip-text text-transparent">Featured Projects</h2>
                     <div className="p-6 rounded-xl mb-6 border border-white hover:-translate-y-1 hover:border-orange-500 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
                         <h3 className="text-2xl font-bold mb-2">DropZone</h3>
