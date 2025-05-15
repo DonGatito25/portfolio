@@ -1,21 +1,21 @@
 import { useEffect, useRef } from "react"
 
-export const RevealOnScroll = ({ children }) => {
+export const EnterL = ({ children }) => {
     const ref = useRef(null)
 
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
-                ref.current.classList.add("visible")
+                ref.current.classList.add("visible-l")
             } else {
-                ref.current.classList.remove("visible")
+                ref.current.classList.remove("visible-l")
             }
-        }, { threshold: 0.1 });
+        }, { threshold: 0.2, rootMargin: "0px 0px -50px 0px" });
 
         if (ref.current) observer.observe(ref.current);
 
         return () => observer.disconnect();
-    })
+    }, [])
 
-    return <div ref={ref} className="reveal">{children}</div>
+    return <div ref={ref} className="reveal-l">{children}</div>
 }
